@@ -412,3 +412,60 @@
 2026-02-17 03:51:33 | INFO | P05 | B002, East Side Branch, Ely, Arrowhead Library System, 2, 0.5, 0.25
 2026-02-17 03:51:33 | INFO | P05 | B003, South Branch, Mankato, Regional Library Network, 1, 0.0, 0.0
 2026-02-17 03:51:33 | INFO | P05 | END main()
+2026-02-17 03:59:20 | INFO | P05 | === RUN START ===
+2026-02-17 03:59:20 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-17 03:59:20 | INFO | P05 | repo_dir=caleb-owens-sql-project
+2026-02-17 03:59:20 | INFO | P05 | python=3.14.2
+2026-02-17 03:59:20 | INFO | P05 | os=Windows 11
+2026-02-17 03:59:20 | INFO | P05 | shell=powershell
+2026-02-17 03:59:20 | INFO | P05 | cwd=.
+2026-02-17 03:59:20 | INFO | P05 | github_actions=False
+2026-02-17 03:59:20 | INFO | P05 | START main()
+2026-02-17 03:59:20 | INFO | P05 | ROOT_DIR: C:\Repos\caleb-owens-sql-project
+2026-02-17 03:59:20 | INFO | P05 | DATA_DIR: C:\Repos\caleb-owens-sql-project\data\library
+2026-02-17 03:59:20 | INFO | P05 | SQL_DIR: C:\Repos\caleb-owens-sql-project\sql\duckdb
+2026-02-17 03:59:20 | INFO | P05 | DB_PATH: C:\Repos\caleb-owens-sql-project\artifacts\duckdb\library.duckdb
+2026-02-17 03:59:20 | INFO | P05 | RUN SQL script: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_clean.sql
+2026-02-17 03:59:21 | INFO | P05 | DONE SQL script: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_clean.sql
+2026-02-17 03:59:21 | INFO | P05 | RUN SQL script: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_bootstrap.sql
+2026-02-17 03:59:21 | INFO | P05 | DONE SQL script: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_bootstrap.sql
+2026-02-17 03:59:21 | INFO | P05 | 
+2026-02-17 03:59:21 | INFO | P05 | RUN SQL query: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_query_checkouts_count.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | owens_library_query_checkouts_count.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | checkout_count
+2026-02-17 03:59:21 | INFO | P05 | 5
+2026-02-17 03:59:21 | INFO | P05 | 
+2026-02-17 03:59:21 | INFO | P05 | RUN SQL query: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_query_branches_count.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | owens_library_query_branches_count.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | branch_count
+2026-02-17 03:59:21 | INFO | P05 | 3
+2026-02-17 03:59:21 | INFO | P05 | 
+2026-02-17 03:59:21 | INFO | P05 | RUN SQL query: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_query_checkouts_aggregate.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | owens_library_query_checkouts_aggregate.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | checkout_count, total_fines, avg_fine_amount
+2026-02-17 03:59:21 | INFO | P05 | 5, 2.0, 0.4
+2026-02-17 03:59:21 | INFO | P05 | 
+2026-02-17 03:59:21 | INFO | P05 | RUN SQL query: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_query_checkouts_by_category.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | owens_library_query_checkouts_by_category.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | material_type, checkout_count, total_fines, avg_fine_amount
+2026-02-17 03:59:21 | INFO | P05 | DVD, 1, 1.5, 1.5
+2026-02-17 03:59:21 | INFO | P05 | Magazine, 1, 0.5, 0.5
+2026-02-17 03:59:21 | INFO | P05 | Book, 3, 0.0, 0.0
+2026-02-17 03:59:21 | INFO | P05 | 
+2026-02-17 03:59:21 | INFO | P05 | RUN SQL query: C:\Repos\caleb-owens-sql-project\sql\duckdb\owens_library_kpi_checkouts.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | owens_library_kpi_checkouts.sql
+2026-02-17 03:59:21 | INFO | P05 | ====================================
+2026-02-17 03:59:21 | INFO | P05 | branch_id, branch_name, city, system_name, checkout_count, total_fines, avg_fine_amount
+2026-02-17 03:59:21 | INFO | P05 | B001, Downtown Branch, Duluth, Arrowhead Library System, 2, 1.5, 0.75
+2026-02-17 03:59:21 | INFO | P05 | B002, East Side Branch, Ely, Arrowhead Library System, 2, 0.5, 0.25
+2026-02-17 03:59:21 | INFO | P05 | B003, South Branch, Mankato, Regional Library Network, 1, 0.0, 0.0
+2026-02-17 03:59:21 | INFO | P05 | END main()

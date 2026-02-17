@@ -8,7 +8,7 @@
 -- We always run all commands from the project root directory.
 --
 -- EXPECTED PROJECT PATHS (relative to repo root):
---   SQL:  sql/duckdb/case_library_bootstrap.sql
+--   SQL:  sql/duckdb/owens_library_bootstrap.sql
 --   CSV:  data/library/branch.csv
 --   CSV:  data/library/checkout.csv
 --   DB:   artifacts/duckdb/library.duckdb

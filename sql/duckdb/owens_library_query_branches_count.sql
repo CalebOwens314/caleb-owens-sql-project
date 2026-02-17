@@ -12,7 +12,7 @@
 -- - Establishes the size of the system
 -- - Provides context for other KPIs
 -- - Helps answer questions like:
---   "Are we growing by adding locations, or just increasing sales?"
+--   "Are we growing fines by adding branches, or just increasing checkouts?"
 
 SELECT
   COUNT(*) AS branch_count

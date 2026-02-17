@@ -11,8 +11,8 @@
 -- ACTIONABLE OUTCOME (EXAMPLE):
 -- We want to identify which libraries are generating the most checkouts so we can:
 -- - allocate staffing during high-performing periods,
--- - increase inventory for top categories,
--- - investigate why low-performing libraries are underperforming,
+-- - increase library inventory for top categories,
+-- - investigate why low-performing libraries (fewer checkouts)are underperforming,
 -- - target promotions where they will have the biggest impact.
 --
 -- In this example, our KPI is library checkout volume (total number of checkouts) by library.

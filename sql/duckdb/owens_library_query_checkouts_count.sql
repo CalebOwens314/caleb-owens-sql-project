@@ -8,8 +8,8 @@
 -- This query operates on the dependent/child table.
 --
 -- WHY:
--- - Volume and revenue are different signals
--- - A library may have many small fines or afew large ones
+-- - Number of checkouts and total checkout fines are different signals
+-- - A library may have many small fines or a few large ones
 -- - Analysts often start by understanding event counts
 --   before analyzing monetary impact
 
