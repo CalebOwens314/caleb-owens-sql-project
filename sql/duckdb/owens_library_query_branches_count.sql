@@ -1,11 +1,11 @@
--- sql/duckdb/case_retail_query_store_count.sql
+-- sql/duckdb/owens_library_query_branches_count.sql
 -- ============================================================
 -- PURPOSE
 -- ============================================================
 -- Answer a simple structural question:
--- "How many stores do we have in our retail system?"
+-- "How many branches do we have in our library system?"
 --
--- This query does NOT involve the sale table.
+-- This query does NOT involve the checkout table.
 -- It operates only on the independent/parent table.
 --
 -- WHY:
@@ -15,5 +15,5 @@
 --   "Are we growing by adding locations, or just increasing sales?"
 
 SELECT
-  COUNT(*) AS store_count
-FROM store;
+  COUNT(*) AS branch_count
+FROM branch;

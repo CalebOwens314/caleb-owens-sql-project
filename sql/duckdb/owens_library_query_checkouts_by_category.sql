@@ -1,28 +1,28 @@
--- sql/duckdb/case_retail_query_sales_by_category.sql
+-- sql/duckdb/owens_library_query_checkouts_by_category.sql
 -- ============================================================
 -- PURPOSE
 -- ============================================================
--- Break overall sales performance down by product category.
+-- Break overall checkout performance down by branch.
 --
 -- This query answers:
--- "How many sales and how much revenue do we have by category?"
+-- "How many checkouts do we have by branch?"
 --
 -- WHY:
 -- - Overall totals hide important differences.
 -- - Grouping lets us compare parts of the system.
 -- - This often reveals where action is needed:
---   * Which categories drive revenue?
---   * Which categories underperform?
+--   * Which branches drive checkout activity?
+--   * Which branches underperform?
 --
 -- IMPORTANT:
 -- This query uses GROUP BY but does NOT join tables yet.
 -- We are still working only with the dependent/child table (sale).
 
 SELECT
-  product_category,
-  COUNT(*) AS sale_count,
-  ROUND(SUM(amount), 2) AS total_revenue,
-  ROUND(AVG(amount), 2) AS avg_sale_amount
-FROM sale
-GROUP BY product_category
-ORDER BY total_revenue DESC;
+  material_type,
+  COUNT(*) AS checkout_count,
+  ROUND(SUM(fine_amount), 2) AS total_fines,
+  ROUND(AVG(fine_amount), 2) AS avg_fine_amount
+FROM checkout
+GROUP BY material_type
+ORDER BY total_fines DESC;

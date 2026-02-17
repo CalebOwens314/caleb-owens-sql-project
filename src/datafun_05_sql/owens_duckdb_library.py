@@ -146,15 +146,15 @@ def main() -> None:
         # ----------------------------------------------------
         # STEP 3: RUN BASIC QUERIES
         # ----------------------------------------------------
-        run_sql_query(con, SQL_DIR / "owens_library_query_store_count.sql")
-        run_sql_query(con, SQL_DIR / "owens_library_query_sales_count.sql")
-        run_sql_query(con, SQL_DIR / "owens_library_query_sales_aggregate.sql")
-        run_sql_query(con, SQL_DIR / "owens_library_query_sales_by_category.sql")
+        run_sql_query(con, SQL_DIR / "owens_library_query_checkouts_count.sql")
+        run_sql_query(con, SQL_DIR / "owens_library_query_branches_count.sql")
+        run_sql_query(con, SQL_DIR / "owens_library_query_checkouts_aggregate.sql")
+        run_sql_query(con, SQL_DIR / "owens_library_query_checkouts_by_category.sql")
 
         # ----------------------------------------------------
         # STEP 4: RUN KPI QUERY (ACTION-DRIVEN)
         # ----------------------------------------------------
-        run_sql_query(con, SQL_DIR / "owens_library_query_kpi_revenue.sql")
+        run_sql_query(con, SQL_DIR / "owens_library_kpi_checkouts.sql")
 
     finally:
         # Regardless of success or failure, always close the connection
